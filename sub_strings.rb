@@ -1,19 +1,15 @@
-require 'pry-byebug'
-
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 str = "Howdy partner, sit down! How's it going?"
 
 def sub_string (string, dictionary)
-  binding.pry
-
   arr = []
 
   string_array = string.split(' ')
   
   string_array.each do |string|
-    string.downcase
+    downcase_string = string.downcase
     dictionary.each do |word|
-      if string.include?(word)
+      if downcase_string.include?(word)
         arr << word
       end
     end
