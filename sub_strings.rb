@@ -1,16 +1,21 @@
 require 'pry-byebug'
 
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
-str = 'below'
+str = "Howdy partner, sit down! How's it going?"
 
 def sub_string (string, dictionary)
   binding.pry
 
   arr = []
+
+  string_array = string.split(' ')
   
-  dictionary.each do |word|
-    if string.include?(word)
-      arr << word
+  string_array.each do |string|
+    string.downcase
+    dictionary.each do |word|
+      if string.include?(word)
+        arr << word
+      end
     end
   end
   arr.tally
