@@ -17,4 +17,4 @@ def sub_string (string, dictionary)
   arr.tally
 end
 
-sub_string(str,dictionary)
+substrings(str,dictionary)
